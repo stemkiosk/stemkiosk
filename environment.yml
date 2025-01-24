@@ -1,0 +1,47 @@
+
+# stemkiosk requirements.txt
+# Usage:
+# $ pip install -r ./requirements.txt
+
+name: base
+#prefix: /opt/conda
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - conda[version='>=24.9.2']
+  - mamba[version='>=1.5.9']
+  - pip
+  - ipython
+  - jupyter_console
+  - ipykernel
+  - bash_kernel
+  - nodejs
+  - pandas
+  - matplotlib
+  - numpy
+  - sympy
+  - ca-certificates
+  - certifi
+  - openssl
+  - pytest
+  - pytest-cov
+  #- pygame
+  #- pgzero
+  - konsole
+  - pip:
+    #- pandas
+    #- numpy
+    #- sympy
+    #- matplotlib
+    # 
+    #- ipykernel
+    #- bash_kernel
+    # 
+    #- jupyter_console
+    #- ipython
+    # 
+    - asciinema
+    - asciifx
+    - asciinema-automation
+    - termsaver

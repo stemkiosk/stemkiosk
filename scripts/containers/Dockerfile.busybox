@@ -1,0 +1,5 @@
+FROM busybox
+
+ARG name="world"
+
+RUN echo "Hello world, ${name}!" && busybox --help

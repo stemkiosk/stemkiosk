@@ -1,0 +1,21 @@
+
+# stemkiosk requirements.txt
+# Usage:
+# $ pip install -r ./requirements.txt
+
+pandas
+numpy
+sympy
+matplotlib
+
+ipykernel
+bash_kernel
+
+jupyter_console
+ipython
+
+asciinema
+asciifx
+asciinema-automation
+
+# termsaver #--help | grep matrix

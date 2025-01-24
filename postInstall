@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+set -x
+
+## Install asciinema -go
+curl -sL https://github.com/gvcgo/asciinema/releases/download/v0.4.0/acast_linux-amd64.zip -o acast_linux-amd64.zip && unzip acast_linux-amd64.zip
+curl -sL  https://github.com/asciinema/agg/releases/download/v1.5.0/agg-x86_64-unknown-linux-gnu -o agg && chmod +x ./agg
+
+
+## Configure jupyter kernels: bash_kernel, itypescript
+python -m bash_kernel.install
+sudo -H npm install -g itypescript
+
