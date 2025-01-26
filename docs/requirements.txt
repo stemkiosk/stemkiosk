@@ -1,0 +1,14 @@
+sphinx
+myst_parser
+sphinx-copybutton
+sphinx-pyscript
+sphinxcontrib-srclinks
+jupyterlite-sphinx
+
+sphinx-book-theme
+
+jupyterlite
+# to install the Python kernel based on Pyodide
+jupyterlite-pyodide-kernel
+# to load Xeus-based kernels
+jupyterlite-xeus

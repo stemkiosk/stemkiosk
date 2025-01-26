@@ -66,6 +66,9 @@ df['2*n'] = df['n']*2
 df['2**n'] = 2**df['n']
 df['n*n'] = df['n']*df['n']
 print(df)
+assert df['2*n'][7] == 14
+assert df['2**n'][7] == 128
+assert df['n*n'][7] == 49
 
 # %%
 
@@ -73,11 +76,9 @@ data = [[n*m for n in range(0,8)] for m in range(0,8)]
 print(data)
 df = pd.DataFrame(data=data)
 print(df)
-
-# %%
 assert df[0][0] == 0
 assert df[2][3] == 6 == 2*3
 assert df[7][7] == 49 == 7*7 == 7**2
 
 # %%
-print("end")
+print(f"End of {__file__}")
