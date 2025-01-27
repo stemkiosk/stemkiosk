@@ -19,7 +19,7 @@ install_requirementstxt:
 	pip install -r requirements.txt
 
 install_environmentyml:
-	mamba env update -f requirements.txt
+	mamba env update -f environment.yml
 
 install_postInstall:
 	bash -x ./postInstall
