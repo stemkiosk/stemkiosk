@@ -1,4 +1,4 @@
-sphinx
+sphinx<7
 myst_parser
 myst_nb
 linkify-it-py
@@ -31,4 +31,4 @@ ghp-import
 pygments-markdown-lexer
 #-e git+https://github.com/jhermann/pygments-markdown-lexer#egg=pygments-markdown-lexer
 
--e git+https://github.com/westurner/wrd_sphinx_theme#egg=wrd_sphinx_theme
+-e git+https://github.com/westurner/wrd_sphinx_theme@develop#egg=wrd_sphinx_theme
