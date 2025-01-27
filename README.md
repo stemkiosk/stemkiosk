@@ -157,8 +157,8 @@ that's available on very many platforms.
 * Vi is almost always installed on Linux and BSD boxes.
 * Vi is often included with Busybox.
 * Vi and Vim are installed with OSX.
-* Vi and Vim are installed by default with many :ref:`Linux
-  Distributions`
+* Vi and Vim are installed by default on many Linux
+  Distributions.
 * Vim runs in a terminal, over SSH, and with a GUI window manager
   (Gvim, Macvim)
 * Vim configuration is written in the vim language.
@@ -308,7 +308,7 @@ Extensions that work in vscode.dev on a Chromebook:
 - Src: https://github.com/devcontainers
 
 Devcontainer.json is a specification for specifying one or more containers to run;
-specifically for IDEs like `vscode`_.
+specifically for IDEs like {ref}`vscode`.
 
 #### vscode Dev Containers
 - Docs: https://code.visualstudio.com/docs/devcontainers/containers
