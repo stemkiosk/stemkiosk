@@ -1,12 +1,12 @@
 # STEM kiosk project
 
 ## Roadmap
-- stemkiosk: short-form videos to demo arithmetic in jupyter notebooks
-  - create a github org account
-  - create a youtube channel
-  - create content
+- stemkiosk: screencast videos to demo arithmetic and other topics in jupyter notebooks and as `.cast` ASCII casts
+  - [ ] create a github org account
+  - [ ] create a youtube channel
+  - [ ] create content
   - names:
-    - stemkiosk
+    - **stemkiosk**
     - stemnotebooks
 - curriculumtool: curriculum graph tool for coverage
   - create and validate YAML-LD files for each curriculum item
@@ -33,7 +33,8 @@
       - e.g. a transitive sort with `tsort` should present the requisite
         material first, if there are enough edges between the
         curriculum items
-- screencast recording setup
+
+### screencast recording setup
   - create a screencast user
   - create a screencast container or vm
   - set the screen resolution and font dpi

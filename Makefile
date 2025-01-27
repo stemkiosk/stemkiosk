@@ -27,6 +27,13 @@ install_environmentyml:
 install_postInstall:
 	bash -x ./postInstall
 
+docs:
+	$(MAKE) -C docs html
+
+docs-serve:
+	$(MAKE) -C docs serve &
+	$(MAKE) -C docs html
+
 docs/topics/math/%.py.cast: docs/topics/math/%.py
 	python -m asciifx --width 80 --height 24 -o $@ $<
 
@@ -40,12 +47,12 @@ docs/topics/math/%.py.cast.gif-play: docs/topics/math/%.py.cast.gif
 	xdg-open $<
 
 all:
-	@#docs/topics/math/%.py.cast
-	$(MAKE) docs/topics/math/arithmetic.py.cast.gif
+	$(MAKE) docs/topics/math/arithmetic/arithmetic.py.cast
+	$(MAKE) docs/topics/math/arithmetic/arithmetic.py.cast.gif
 
 termsaver:
 	#pip install termsaver
-	termsaver programmer -p ./docs/topics/math/arithmetic.py
+	termsaver programmer -p ./docs/topics/math/arithmetic/arithmetic.py
 	@echo https://github.com/brunobraga/termsaver
 
 termsaver-matrix:
