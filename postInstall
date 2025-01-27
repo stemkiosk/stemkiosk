@@ -8,5 +8,5 @@ curl -sL  https://github.com/asciinema/agg/releases/download/v1.5.0/agg-x86_64-u
 
 ## Configure jupyter kernels: bash_kernel, itypescript
 python -m bash_kernel.install
-sudo -H npm install -g itypescript
+npm install -g itypescript
 
