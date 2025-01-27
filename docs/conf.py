@@ -137,3 +137,13 @@ srclink_src_path = 'docs/'
 srclink_branch = 'main'
 #srclink_branch = 'develop'
 
+
+sphinxcontrib_asciinema_defaults = {
+    'theme': 'github-dark',
+    'autoPlay': True,
+    'loop': True,
+    'preload': 1,
+    # 'font-size': '15px',
+#    'path': 'path/to/castdir'
+    'cols': 100,
+}
