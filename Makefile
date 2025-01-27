@@ -147,10 +147,12 @@ _create-docs-folder:
 SCREENCASTUSER=demo
 sudoscreen=sudo -u "${SCREENCASTUSER}"
 _create-screencast-user:
-	# create a user named $SCREENCASTUSER if one doesn't already exist
+	# create a user named $$SCREENCASTUSER if one doesn't already exist
 	id "${SCREENCASTUSER}" || sudo useradd "${SCREENCASTUSER}" --create-home
 	# git clone the stemkiosk repo into ~/workspace/stemkiosk
 	${sudoscreen} sh -x -c 'mkdir -p ~/workspace; cd ~/workspace/; test -d stemkiosk/ || git clone https://github.com/westurner/stemkiosk; cd stemkiosk/ && ls -al'
+	# install miniforge
+	$(MAKE) _install-miniforge-screencast-user
 	# run `make install` and then ls ~/.local/bin
 	${sudoscreen} sh -x -c 'cd ~/workspace/stemkiosk;MAMBA="${mamba}" make install ; test ! -d ~/.local/bin || ls -al ~/.local/bin'
 	# login at least once to attempt to clear the initial login banner
@@ -164,12 +166,14 @@ MINIFORGE3_URL=https://github.com/conda-forge/miniforge/releases/latest/download
 CONDA_ROOT_SCU=/home/${SCREENCASTUSER}/conda
 WORKSPACE=/home/${SCREENCASTUSER}/workspace
 mamba=${CONDA_ROOT_SCU}/bin/mamba
+XDG_CONFIG_HOME?=/home/${SCREENCASTUSER}/.config
 _install-miniforge-screencast-user:
 	# Install miniforge:  https://github.com/conda-forge/miniforge
 	@echo "MINIFORGE3_URL: ${MINIFORGE3_URL}"
 	${sudoscreen} sh -x -c 'cd "${WORKSPACE}" && test -f "${MINIFORGE3_SH}" || curl -L -o "${MINIFORGE3_SH}" "${MINIFORGE3_URL}"'
 	# TODO: check checksum
 	${sudoscreen} sh -x -c 'cd "${WORKSPACE}" && test -d "${CONDA_ROOT_SCU}" || bash "${MINIFORGE3_SH}" -b -p "${CONDA_ROOT_SCU}"'
-	${sudoscreen} sh -x -c '${mamba} init'
-	${sudoscreen} sh -x -c '${mamba} activate "${CONDA_ROOT_SCU}" && ${mamba} freeze'
+	#${sudoscreen} sh -x -c 'ls -al ~/.config/conda*; XDG_CONFIG_HOME="${XDG_CONFIG_HOME}" ${mamba} init'
+	${sudoscreen} sh -x -c 'XDG_CONFIG_HOME="/home/${SCREENCASTUSER}" CONDARC="${CONDA_ROOT_SCU}/.condarc" ${mamba} init'
+	${sudoscreen} -i bash --login -c 'mamba activate "${CONDA_ROOT_SCU}" && set -x && ${mamba} env export --from-history'
 
