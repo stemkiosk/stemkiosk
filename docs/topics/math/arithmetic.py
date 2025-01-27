@@ -1,4 +1,8 @@
 
+# %% [markdown]
+# # docs/topics/math/arithmetic.py
+
+# %%
 name = "World;--'\""
 print(f"Hello world, {name}!")
 
@@ -81,4 +85,4 @@ assert df[2][3] == 6 == 2*3
 assert df[7][7] == 49 == 7*7 == 7**2
 
 # %%
-print(f"End of {__file__}")
+print(f"End of arithmetic.py")

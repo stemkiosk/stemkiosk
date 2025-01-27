@@ -14,6 +14,8 @@ dependencies:
   - pip
   - ipython
   - jupyter_console
+  - jupytext
+  - jupyterlab
   - ipykernel
   - bash_kernel
   - nodejs

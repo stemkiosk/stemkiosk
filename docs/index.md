@@ -1,16 +1,21 @@
 
 # stemkiosk documentation
-```{contents}
+<!-- ```{contents}
 :depth: 3
-```
+``` -->
 
-# Table of Contents
+```{index} Table of Contents
+```
+(contents)=
+## Table of Contents
 ```{toctree}
 :maxdepth: 99
-:caption: Table of Contents:
+
+readme
+topics/index
+topics/math
 ```
 
-# README
 ```{include} ../README.md
 ```
 

@@ -1,5 +1,7 @@
 sphinx
 myst_parser
+myst_nb
+linkify-it-py
 sphinx-copybutton
 sphinx-pyscript
 sphinxcontrib-srclinks

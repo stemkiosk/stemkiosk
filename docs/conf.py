@@ -23,7 +23,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'myst_parser',
+    #'myst_parser',
+    'myst_nb',
     'sphinx_copybutton',
     #'sphinx_pyscript',
     #'jupyterlite_sphinx',
@@ -34,9 +35,15 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.txt': 'restructuredtext',
-    '.md': 'markdown',
+    #'.txt': 'restructuredtext',
+    #'.md': 'markdown',
+    '.md': 'myst-nb',
+    '.myst.md': 'myst-nb',
+    '.myst': 'myst-nb',
+    '.ipynb': 'myst-nb',
 }
+# MyST Markdown docs:
+# - https://myst-nb.readthedocs.io/en/latest/authoring/basics.html#myst-markdown
 
 master_doc = 'index'
 
@@ -54,3 +61,22 @@ copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: 
 copybutton_prompt_is_regexp = True
 copybutton_line_continuation_character = "\\"
 copybutton_here_doc_delimiter = "EOF"
+
+
+myst_enable_extensions = [
+    "amsmath",
+    "attrs_inline",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "linkify",
+    #"replacements",
+    #"smartquotes",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+]
+
