@@ -6,6 +6,9 @@ sphinx-copybutton
 sphinx-pyscript
 jupyterlite-sphinx
 
+#  https://github.com/divi255/sphinxcontrib.asciinema
+sphinxcontrib.asciinema
+
 sphinx-book-theme
 
 jupyterlite

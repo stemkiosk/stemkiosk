@@ -31,6 +31,7 @@ extensions = [
     'sphinxjp.themes.basicstrap',
     'wrd_sphinx_theme',
     'sphinxcontrib.srclinks',
+    'sphinxcontrib.asciinema',
 ]
 
 templates_path = ['_templates']
