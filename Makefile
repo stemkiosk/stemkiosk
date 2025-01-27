@@ -11,7 +11,7 @@ help:
 
 
 install:
-	$(MAKE) install_miniforge
+	#type mamba || $(MAKE) install_miniforge
 	$(MAKE) install_environmentyml
 	$(MAKE) install_requirementstxt
 	$(MAKE) install_postInstall
@@ -162,12 +162,14 @@ _rm-screencast-user:
 MINIFORGE3_SH=Miniforge3-$(shell uname)-$(shell uname -m).sh
 MINIFORGE3_URL=https://github.com/conda-forge/miniforge/releases/latest/download/${MINIFORGE3_SH}
 CONDA_ROOT_SCU=/home/${SCREENCASTUSER}/conda
+WORKSPACE=/home/${SCREENCASTUSER}/workspace
 mamba=${CONDA_ROOT_SCU}/bin/mamba
 _install-miniforge-screencast-user:
 	# Install miniforge:  https://github.com/conda-forge/miniforge
 	@echo "MINIFORGE3_URL: ${MINIFORGE3_URL}"
-	${sudoscreen} sh -x -c 'cd ~/workspace && test -f "${MINIFORGE3_SH}" || curl -L -o "${MINIFORGE3_SH}" "${MINIFORGE3_URL}"'
+	${sudoscreen} sh -x -c 'cd "${WORKSPACE}" && test -f "${MINIFORGE3_SH}" || curl -L -o "${MINIFORGE3_SH}" "${MINIFORGE3_URL}"'
 	# TODO: check checksum
-	${sudoscreen} sh -x -c 'cd ~/workspace && test -d "${CONDA_ROOT_SCU}" || bash "${MINIFORGE3_SH}" -b -p "${CONDA_ROOT_SCU}"'
+	${sudoscreen} sh -x -c 'cd "${WORKSPACE}" && test -d "${CONDA_ROOT_SCU}" || bash "${MINIFORGE3_SH}" -b -p "${CONDA_ROOT_SCU}"'
 	${sudoscreen} sh -x -c '${mamba} init'
 	${sudoscreen} sh -x -c '${mamba} activate "${CONDA_ROOT_SCU}" && ${mamba} freeze'
+
