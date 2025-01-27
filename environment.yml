@@ -34,14 +34,15 @@ dependencies:
     #- numpy
     #- sympy
     #- matplotlib
-    # 
+    #
     #- ipykernel
     #- bash_kernel
-    # 
+    #
     #- jupyter_console
     #- ipython
-    # 
+    #
     - asciinema
-    - asciifx
+    - -e git+https://github.com/westurner/asciifx@syntax_highlighting_ipython_jupyter#egg=asciifx
+    #
     - asciinema-automation
     - termsaver
