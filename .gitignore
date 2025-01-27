@@ -2,3 +2,8 @@
 # UndoTree
 .*.un~
 __pycache__
+acast
+agg
+docs/_build
+docs/_output
+.jupyterlite.doit.db
