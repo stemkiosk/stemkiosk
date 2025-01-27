@@ -5,6 +5,7 @@
 # %%
 name = "World;--'\""
 print(f"Hello world, {name}!")
+print("This is a screencast of code written in the Python programming language."))
 
 # %%
 print(1+1)
