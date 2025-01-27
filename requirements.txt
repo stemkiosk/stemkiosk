@@ -16,7 +16,7 @@ ipython
 
 asciinema
 #asciifx
--e git+https://github.com/westurner/asciifx#egg=asciifx
+-e git+https://github.com/westurner/asciifx@syntax_highlighting_ipython_jupyter#egg=asciifx
 asciinema-automation
 
 # termsaver #--help | grep matrix
