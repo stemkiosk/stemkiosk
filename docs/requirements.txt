@@ -4,7 +4,6 @@ myst_nb
 linkify-it-py
 sphinx-copybutton
 sphinx-pyscript
-sphinxcontrib-srclinks
 jupyterlite-sphinx
 
 sphinx-book-theme
@@ -14,3 +13,19 @@ jupyterlite
 jupyterlite-pyodide-kernel
 # to load Xeus-based kernels
 jupyterlite-xeus
+
+sphinxcontrib-srclinks
+#-e git+ssh://git@github.com/westurner/sphinxcontrib-srclinks#egg=sphinxcontrib-srclinks
+
+
+#sphinxjp.themes.basicstrap
+#-e git+https://github.com/tell-k/sphinxjp.themes.basicstrap@7a5b36d1deeb#egg=sphinxjp.themes.basicstrap
+-e git+https://github.com/westurner/sphinxjp.themes.basicstrap#egg=sphinxjp.themes.basicstrap
+
+ghp-import
+#-e git+https://github.com/davisp/ghp-import#egg=ghp-import
+
+pygments-markdown-lexer
+#-e git+https://github.com/jhermann/pygments-markdown-lexer#egg=pygments-markdown-lexer
+
+-e git+https://github.com/westurner/wrd_sphinx_theme#egg=wrd_sphinx_theme

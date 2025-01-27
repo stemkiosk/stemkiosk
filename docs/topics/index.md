@@ -1,7 +1,8 @@
 
-# Topics
+# Topics in STEM
 
 ```{toctree}
 :maxdepth: 99
-math/index
+math/index.md
 ```
+

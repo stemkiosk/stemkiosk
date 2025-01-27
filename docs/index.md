@@ -4,6 +4,7 @@
 :depth: 3
 ``` -->
 
+
 ```{index} Table of Contents
 ```
 (contents)=
@@ -13,11 +14,8 @@
 
 readme
 topics/index
-topics/math
 ```
 
-```{include} ../README.md
-```
 
 
 <!-- 

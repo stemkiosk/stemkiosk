@@ -28,6 +28,9 @@ extensions = [
     'sphinx_copybutton',
     #'sphinx_pyscript',
     #'jupyterlite_sphinx',
+    'sphinxjp.themes.basicstrap',
+    'wrd_sphinx_theme',
+    'sphinxcontrib.srclinks',
 ]
 
 templates_path = ['_templates']
@@ -51,7 +54,13 @@ master_doc = 'index'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_book_theme'
+#html_theme = 'basic'
+#html_theme = 'classic'
+html_theme = 'wrd_sphinx_theme'
 html_static_path = ['_static']
+html_theme_options = {
+    'icon_links': []
+}
 
 
 # sphinx-copybutton
@@ -79,4 +88,51 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
+
+
+sidebars_globaltoc = [
+    'globaltoc.html',
+    'relations.html',
+    'searchbox.html',
+    'srclinks.html',
+    'links.html', ]
+
+sidebars_localtoc = [
+    'localtoc.html',
+    'relations.html',
+    'searchbox.html',
+    'srclinks.html',
+    'links.html', ]
+
+
+sidebars_globallocaltoc = [
+    'localtoc.html',
+    'globaltoc.html',
+    'relations.html',
+    'searchbox.html',
+    'srclinks.html',
+    'links.html', ]
+    #'globaltoc.html',
+
+# Custom sidebar templates, maps document names to template names.
+html_sidebars = {
+    #'*': sidebars_globaltoc,
+    '**': sidebars_globallocaltoc,
+    # 'index': sidebars_globaltoc,
+}
+
+
+
+html_show_sourcelink = True
+
+
+# srclink settings
+srclink_project = 'https://github.com/westurner/stemkiosk'
+#srclink_project = 'https://bitbucket.org/westurner/sphinxcontrib-srclinks'
+#srclink_project = 'hg@bitbucket.org/westurner/sphinxcontrib-srclinks'
+#srclink_project = 'git@bitbucket.org/westurner/sphinxcontrib-srclinks'
+srclink_src_path = 'docs/'
+#srclink_src_path = ''
+srclink_branch = 'main'
+#srclink_branch = 'develop'
 

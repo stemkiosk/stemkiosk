@@ -1,7 +1,6 @@
 
 ## Arithmetic
 ```{toctree}
-index.md
 arithmetic.ipynb
 ```
 
