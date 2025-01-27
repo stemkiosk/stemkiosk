@@ -35,13 +35,13 @@ docs-serve:
 	$(MAKE) -C docs html
 
 docs/topics/math/%.py.cast: docs/topics/math/%.py
-	python -m asciifx --speed 9 --width 80 --height 24 -o $@ $<
+	python -m asciifx --width 80 --height 24 -o $@ $<
 
 FONTFAMILY=Source Code Pro for Powerline,JetBrains Mono,Fira Code,SF Mono,Menlo,Consolas,DejaVu Sans Mono,Liberation Mono
 
 AGG=./agg
 docs/topics/math/%.py.cast.gif: docs/topics/math/%.py.cast
-	${AGG} --speed=8 --font-family="${FONTFAMILY}" --theme=github-dark --font-size=27 $< $@
+	${AGG} --speed=10 --font-family="${FONTFAMILY}" --theme=github-dark --font-size=27 $< $@
 
 docs/topics/math/%.py.cast.gif-play: docs/topics/math/%.py.cast.gif
 	xdg-open $<

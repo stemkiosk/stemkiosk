@@ -3,9 +3,16 @@
 # # docs/topics/math/arithmetic.py
 
 # %%
+import time
+from pathlib import Path
+with open('ascii_stem_night_1__carty.txt') as asciiart:
+    for line in asciiart.readlines():
+        print(line.rstrip())
+
+# %%
 name = "World;--'\""
 print(f"Hello world, {name}!")
-print("This is a screencast of code written in the Python programming language."))
+print("This is a screencast of code written in the Python programming language.")
 
 # %%
 print(1+1)
@@ -75,6 +82,7 @@ assert df['2*n'][7] == 14
 assert df['2**n'][7] == 128
 assert df['n*n'][7] == 49
 
+#[think-time=20]
 # %%
 
 data = [[n*m for n in range(0,8)] for m in range(0,8)]
@@ -85,5 +93,17 @@ assert df[0][0] == 0
 assert df[2][3] == 6 == 2*3
 assert df[7][7] == 49 == 7*7 == 7**2
 
+
+#[think-time=20]
+def test_sympy():
+    import sympy as sy
+    x,y,z = sy.symbols('x, y, z')
+    expression = sy.Eq(x+y, z)
+    print(expression)
+    print(expression.subs({x:3, y:4, z:7}))
+    assert expression.subs({x:3, y:4, z:7})
+
+test_sympy()
+
 # %%
-print(f"End of arithmetic.py")
+print(f"End of arithmetic.py.")
