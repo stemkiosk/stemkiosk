@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>VSCode &mdash; stemkiosk  documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/asciinema-player_3.6.3.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/css/local.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/asciinema-player_3.6.3.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/local.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="stemkiosk  documentation" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">stemkiosk  documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">VSCode</a><ul>
+<li><a class="reference internal" href="#vscode-dev">vscode.dev</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#devcontainer-json">devcontainer.json</a><ul>
+<li><a class="reference internal" href="#vscode-dev-containers">vscode Dev Containers:</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/topics/vscode/vscode_howto.md.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-sm-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">VSCode</a><ul>
+<li><a class="reference internal" href="#vscode-dev">vscode.dev</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#devcontainer-json">devcontainer.json</a><ul>
+<li><a class="reference internal" href="#vscode-dev-containers">vscode Dev Containers:</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">STEM kiosk project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html#tools">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Topics in STEM</a></li>
+</ul>
+
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+
+<div class="widget navlinks">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/topics/vscode/vscode_howto.md.txt"
+            rel="nofollow"
+            target="_blank">Source (.md)</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/blob/main/docs/topics/vscode/vscode_howto.md"
+            rel="nofollow"
+            target="_blank">Source</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/edit/main/docs/topics/vscode/vscode_howto.md"
+            rel="nofollow"
+            target="_blank">Edit</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/commits/main/docs/topics/vscode/vscode_howto.md"
+             rel="nofollow"
+             target="_blank">History</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/blame/main/docs/topics/vscode/vscode_howto.md"
+             rel="nofollow"
+             target="_blank">Annotate</a></li>
+  </ul>
+</div>
+<div class="widget srclinks highlight">
+  <h3>Source</h3>
+  <p><a href="https://github.com/westurner/stemkiosk">github.com/westurner/stemkiosk</a>
+      / <a href="https://github.com/westurner/stemkiosk/tree/main"
+                rel="nofollow"
+                target="_blank"
+                font="monospace">main</a>
+  </p>
+  <ul>
+    <li><pre>git clone https://github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone ssh://git@github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone git://github.com/westurner/stemkiosk</pre></li>
+  </ul>
+</div><!--<div class="widget">
+    <h3><a href=""></a></h3>
+    <ul>
+        <li><a href=""></a></li>
+    </ul>
+</div>-->
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <section id="vscode">
+<h1>VSCode<a class="headerlink" href="#vscode" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Visual_Studio_Code">https://en.wikipedia.org/wiki/Visual_Studio_Code</a></p></li>
+<li><p>Homepage: <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/Microsoft/vscode">https://github.com/Microsoft/vscode</a></p></li>
+<li><p>Download: <a class="reference external" href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></p></li>
+<li><p>ChocolateyPkg: <a class="reference external" href="https://chocolatey.org/packages/vscode">https://chocolatey.org/packages/vscode</a></p></li>
+<li><p>BrewPkg: <a class="reference external" href="https://formulae.brew.sh/cask/visual-studio-code">https://formulae.brew.sh/cask/visual-studio-code</a></p></li>
+<li><p>FlatpakPkg: <a class="reference external" href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/">https://code.visualstudio.com/docs/</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks">https://code.visualstudio.com/docs/getstarted/tips-and-tricks</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/keybindings">https://code.visualstudio.com/docs/getstarted/keybindings</a></p></li>
+</ul>
+<p>VSCode (<em>Visual Studio Code</em>) is an open source programmer’s text editor
+written in TypeScript, Javascript, and CSS
+that’s available for Windows, Mac, and Linux.</p>
+<ul class="simple">
+<li><p>VSCode extensions are written in JS and TS.</p></li>
+<li><p>VSCode has collaborative editing features with multiple cursors.</p></li>
+<li><p>VSCode and MS Visual Studio are different projects.</p></li>
+<li><p>VSCode supports many of the Visual Studio keyboard shortcuts.</p></li>
+<li><p>There is an official Vim extension for VSCode.</p></li>
+<li><p>VSCode takes inspiration from the NERDTree, CtrlP, and TagBar vim extensions.</p></li>
+<li><p>The vscode Outline view is below the open directory in the Explorer tab of the sidebar.</p></li>
+<li><p>VScode keyboard shortcuts for Linux and Windows:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-p</span></code> or <code class="docutils literal notranslate"><span class="pre">F1</span></code> opens the Command Palette</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-p</span></code> opens the Go to File dialogue
+(which lists all available commands based on your current context)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Space</span></code> opens the context-sensitive Intellisense code completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-`</span></code>  (Ctrl-backtick) toggles the Terminal open and closed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-D</span></code> (or <code class="docutils literal notranslate"><span class="pre">Enter</span></code>) advances to the next <code class="docutils literal notranslate"><span class="pre">Ctrl-F</span></code> search match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-.</span></code> opens breadcrumbs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-B</span></code> toggles the sidebar</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-E</span></code> toggles or sets focus to Explorer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-G</span></code> toggles or sets focus to Source Control (git)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-V</span></code> opens a Markdown HTML preview</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-w</span></code> closes a tab</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Shift-Alt</span></code> + Click-and-Drag selects a rectangle of rows and/or columns of characters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Alt-Up/Down</span></code> moves the current line or selection up or down</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Home</span></code> and <code class="docutils literal notranslate"><span class="pre">End</span></code> (<code class="docutils literal notranslate"><span class="pre">Fn-Left</span></code> and <code class="docutils literal notranslate"><span class="pre">Fn-Right</span></code>) go the the beginning and end of a line</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F5</span></code> runs the file or the debugger</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Shift-F5</span></code> stops the debugger</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F11</span></code> / <code class="docutils literal notranslate"><span class="pre">Shift-F11</span></code> Step into/out</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F10</span></code> Step over</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-K</span> <span class="pre">Ctrl-R</span></code> or <code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> + “Help: Keyboard Shortcuts References”
+opens the <em>online</em> vscode keyboard shortcuts document for Win/Mac/Lin:</p>
+<ul>
+<li><p><a class="reference external" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf</a> <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf</a> <code class="docutils literal notranslate"><span class="pre">⌘</span></code></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf</a> <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></p></li>
+</ul>
+</li>
+<li><p>VScode keybindings docs: <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/keybindings">https://code.visualstudio.com/docs/getstarted/keybindings</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="vscode-dev">
+<h2>vscode.dev<a class="headerlink" href="#vscode-dev" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Homepage: <a class="reference external" href="https://vscode.dev/">https://vscode.dev/</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/editor/vscode-web">https://code.visualstudio.com/docs/editor/vscode-web</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/api/extension-guides/web-extensions">https://code.visualstudio.com/api/extension-guides/web-extensions</a></p></li>
+</ul>
+<p>vscode.dev is a WASM build of <code class="docutils literal notranslate"><span class="pre">vscode</span></code>_ (Visual Sutdio Code for the Web)
+that runs in a browser,
+optionally without connecting to a <code class="docutils literal notranslate"><span class="pre">code-server</span></code> on a server.</p>
+<ul class="simple">
+<li><p>vscode.dev works in Chrome on Chromebooks.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> to open Command Palette keyboard shortcut doesn’t work in Firefox.</p></li>
+<li><p>some vscode extensions support vscode.dev</p></li>
+</ul>
+<p>Extensions that work in vscode.dev on a Chromebook:</p>
+<ul class="simple">
+<li><p>vscode-pyodide: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=joyceerhl.vscode-pyodide">https://marketplace.visualstudio.com/items?itemName=joyceerhl.vscode-pyodide</a></p></li>
+<li><p>Pyodide Runner: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=tym-inc.pyodide">https://marketplace.visualstudio.com/items?itemName=tym-inc.pyodide</a></p></li>
+<li><p>Python: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">https://marketplace.visualstudio.com/items?itemName=ms-python.python</a></p></li>
+<li><p>Jupyter: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter</a></p></li>
+<li><p>container-wasm: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ktock.container-wasm">https://marketplace.visualstudio.com/items?itemName=ktock.container-wasm</a></p>
+<ul>
+<li><p>container2wasm: <a class="reference external" href="https://github.com/ktock/container2wasm">https://github.com/ktock/container2wasm</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="devcontainer-json">
+<h1>devcontainer.json<a class="headerlink" href="#devcontainer-json" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Homepage: <a class="reference external" href="https://containers.dev/">https://containers.dev/</a></p></li>
+<li><p>Spec: <a class="reference external" href="https://containers.dev/implementors/json_reference/">https://containers.dev/implementors/json_reference/</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers/spec">https://github.com/devcontainers/spec</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers/features/tree/main/src">https://github.com/devcontainers/features/tree/main/src</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers/cli">https://github.com/devcontainers/cli</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers">https://github.com/devcontainers</a></p></li>
+</ul>
+<p>Devcontainer.json is a specification for specifying one or more containers to run;
+specifically for IDEs like <code class="docutils literal notranslate"><span class="pre">vscode</span></code>_.</p>
+<section id="vscode-dev-containers">
+<h2>vscode Dev Containers:<a class="headerlink" href="#vscode-dev-containers" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/devcontainers/containers">https://code.visualstudio.com/docs/devcontainers/containers</a></p></li>
+</ul>
+<p>Keyboard Shortcuts for vscode Dev Containers:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers:”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers: Open Container Configuration File”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers: Open Folder in Container”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers: Open Workspace in Container”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift</span> <span class="pre">P</span></code> “Dev Containers: Reopen Folder Locally”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift</span> <span class="pre">P</span></code> “Dev Containers: Help”</p></li>
+</ul>
+<p>Devcontainer Features:</p>
+<ul class="simple">
+<li><p>Devcontainer Features are composable; you can add multiple features to a devcontainer.json.</p></li>
+<li><p>Devcontainer Features split configuration that would be in just one Dockerfile into many JSON and Dockerfiles.</p></li>
+<li><p>An SBOM tool could discover the versions of software installed in a devcontainer
+by: instructions in the devcontainer.json, instructions in the Dockerfile, Devcontainer Features,
+or other.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav text-center">
+        <li><a href="../../index.html">stemkiosk  documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav text-center">
+      
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2025, @stemkiosk.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.2.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

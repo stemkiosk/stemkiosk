@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Vim &mdash; stemkiosk  documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/asciinema-player_3.6.3.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/css/local.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../_static/asciinema-player_3.6.3.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/local.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="stemkiosk  documentation" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">stemkiosk  documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/topics/vim/vim_howto.md.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-sm-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">STEM kiosk project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html#tools">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Topics in STEM</a></li>
+</ul>
+
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+
+<div class="widget navlinks">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/topics/vim/vim_howto.md.txt"
+            rel="nofollow"
+            target="_blank">Source (.md)</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/blob/main/docs/topics/vim/vim_howto.md"
+            rel="nofollow"
+            target="_blank">Source</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/edit/main/docs/topics/vim/vim_howto.md"
+            rel="nofollow"
+            target="_blank">Edit</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/commits/main/docs/topics/vim/vim_howto.md"
+             rel="nofollow"
+             target="_blank">History</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/blame/main/docs/topics/vim/vim_howto.md"
+             rel="nofollow"
+             target="_blank">Annotate</a></li>
+  </ul>
+</div>
+<div class="widget srclinks highlight">
+  <h3>Source</h3>
+  <p><a href="https://github.com/westurner/stemkiosk">github.com/westurner/stemkiosk</a>
+      / <a href="https://github.com/westurner/stemkiosk/tree/main"
+                rel="nofollow"
+                target="_blank"
+                font="monospace">main</a>
+  </p>
+  <ul>
+    <li><pre>git clone https://github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone ssh://git@github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone git://github.com/westurner/stemkiosk</pre></li>
+  </ul>
+</div><!--<div class="widget">
+    <h3><a href=""></a></h3>
+    <ul>
+        <li><a href=""></a></li>
+    </ul>
+</div>-->
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <section id="vim">
+<h1>Vim<a class="headerlink" href="#vim" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Src: <a class="reference external" href="https://github.com/vim/vim">https://github.com/vim/vim</a></p></li>
+<li><p>Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Vim_(text_editor)">https://en.wikipedia.org/wiki/Vim_(text_editor)</a></p></li>
+<li><p>Homepage: <a class="reference external" href="https://www.vim.org/">https://www.vim.org/</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://www.vim.org/docs.php">https://www.vim.org/docs.php</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://github.com/vim/vim/blob/master/runtime/tutor/en/vim-01-beginner.tutor">https://github.com/vim/vim/blob/master/runtime/tutor/en/vim-01-beginner.tutor</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://learnxinyminutes.com/docs/vim/">https://learnxinyminutes.com/docs/vim/</a></p></li>
+<li><p>Src: git <a class="reference external" href="https://github.com/vim/vim">https://github.com/vim/vim</a></p></li>
+</ul>
+<p>ViM (Vi-iMproved) is an open source text editor written in C
+that’s available on very many platforms.</p>
+<ul class="simple">
+<li><p>Vim help can be accessed with <code class="docutils literal notranslate"><span class="pre">:help</span></code> and <code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">help</span></code>
+(Press <code class="docutils literal notranslate"><span class="pre">&lt;esc&gt;</span></code>, Type <code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">help</span></code>, Press Enter)</p></li>
+<li><p>Vi is almost always installed on Linux and BSD boxes.</p></li>
+<li><p>Vi is often included with Busybox.</p></li>
+<li><p>Vi and Vim are installed with OSX.</p></li>
+<li><p>Vi and Vim are installed by default with many :ref:<code class="docutils literal notranslate"><span class="pre">Linux</span> <span class="pre">Distributions</span></code></p></li>
+<li><p>Vim runs in a terminal, over SSH, and with a GUI window manager
+(Gvim, Macvim)</p></li>
+<li><p>Vim configuration is written in the vim language.</p></li>
+<li><p>Vim reads a few vimrc configuration files in sequence (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">vimrc</span></code>)</p></li>
+<li><p>GVim is Vim for Gnome window manager</p></li>
+<li><p>GVim reads a few vimrc configuration files in sequence (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">gvimrc</span></code>)</p></li>
+<li><p>MacVim is Vim for OSX</p></li>
+<li><p>One way to write changes and exit vim: <code class="docutils literal notranslate"><span class="pre">:wq!</span></code>
+(Press <code class="docutils literal notranslate"><span class="pre">&lt;esc&gt;</span></code>, Type <code class="docutils literal notranslate"><span class="pre">:wq!</span></code>, Press Enter)</p></li>
+<li><p>There are many plugins for vim.</p></li>
+<li><p>NERDTree is an example of a vim plugin:
+<a class="reference external" href="https://github.com/scrooloose/nerdtree">https://github.com/scrooloose/nerdtree</a> (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">nerdtree</span></code>)</p></li>
+<li><p>SpaceVim and westurner/dotvim include the NERDtree plugin</p></li>
+<li><p>Vim keyboard shortcuts are calling mappings.</p></li>
+<li><p>Vim mappings are defined in a vimrc file.</p></li>
+<li><p>Examples of vim mappings:
+<code class="docutils literal notranslate"><span class="pre">\e</span></code> opens NERDTree, <code class="docutils literal notranslate"><span class="pre">\E</span></code> opens NERDTree to the current file</p></li>
+<li><p>Vim mappings can be defined for different vim modes:
+<code class="docutils literal notranslate"><span class="pre">:map</span> <span class="pre">\e</span></code> (command mode), <code class="docutils literal notranslate"><span class="pre">:imap</span> <span class="pre">\e</span></code> (insert mode) (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">modes</span></code>)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">i</span></code> or <code class="docutils literal notranslate"><span class="pre">a</span></code> while in command mode to enter
+insert or append mode (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">vim-modes</span></code>)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code> to return to command mode</p></li>
+</ul>
+<p>Browser extensions with vim-style keyboard shortcuts:</p>
+<ul class="simple">
+<li><p>Vimium (Chrome)</p></li>
+<li><p>Vimperator (Firefox)</p></li>
+<li><p>Wasavi (Chrome, Opera, Firefox)</p></li>
+</ul>
+<p>A number of web apps support vim-style keyboard shortcuts
+like <code class="docutils literal notranslate"><span class="pre">j</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code> for up and down:</p>
+<ul class="simple">
+<li><p>GMail (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p></li>
+<li><p>Facebook (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p></li>
+<li><p>X (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p></li>
+<li><p>GitHub (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help, <code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code> to close help)</p></li>
+</ul>
+<p>Games with support for vim-style keyboard shortcuts:</p>
+<ul class="simple">
+<li><p>vimtutor: <code class="docutils literal notranslate"><span class="pre">:e</span> <span class="pre">$VIMRUNTIME/tutor/en/vim-01-beginner.tutor</span></code></p></li>
+<li><p><a class="reference external" href="https://vim-adventures.com/">https://vim-adventures.com/</a></p></li>
+</ul>
+<p>IDEs with support for vim-style keyboard shortcuts:</p>
+<ul class="simple">
+<li><p>vscode, <a class="reference external" href="https://vscode.dev/">https://vscode.dev/</a>, <a class="reference external" href="https://github.dev/">https://github.dev/</a>, gitpod, devpod, code-server</p></li>
+<li><p>jupyterlab, jupyterlite</p></li>
+<li><p>colab</p></li>
+<li><p>neovim</p></li>
+<li><p>vim</p></li>
+<li><p>vi (busybox (initrd,))</p></li>
+</ul>
+<p>How to access help in vim:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:help</span></code> – open help in a split (<code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code>, then <code class="docutils literal notranslate"><span class="pre">:help</span></code>, then <strong>Enter</strong> (<code class="docutils literal notranslate"><span class="pre">&lt;CR&gt;</span></code>); <code class="docutils literal notranslate"><span class="pre">:q</span></code> to close)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C-w-j</span></code> – focus a window down ((<code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code> to exit insert or append mode), then <code class="docutils literal notranslate"><span class="pre">&lt;Ctrl&gt;&lt;w&gt;</span> <span class="pre">&lt;h/j/k/l&gt;</span></code>; <code class="docutils literal notranslate"><span class="pre">:map</span> <span class="pre">&lt;C-W&gt;J</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-]</span></code> – follow (help,) link under cursor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-O</span></code> – go back</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-I</span></code> – go forward</p></li>
+</ul>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav text-center">
+        <li><a href="../../index.html">stemkiosk  documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav text-center">
+      
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2025, @stemkiosk.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.2.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

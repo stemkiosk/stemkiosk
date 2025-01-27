@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>STEM kiosk project &mdash; stemkiosk  documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="_static/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+<link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="_static/asciinema-player_3.6.3.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/local.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/asciinema-player_3.6.3.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/local.js"></script>
+    <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="stemkiosk  documentation" href="index.html" />
+    <link rel="next" title="Topics in STEM" href="topics/index.html" />
+    <link rel="prev" title="stemkiosk documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">stemkiosk  documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">STEM kiosk project</a><ul>
+<li><a class="reference internal" href="#roadmap">Roadmap</a><ul>
+<li><a class="reference internal" href="#screencast-recording-setup">screencast recording setup</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-cases-user-stories-why">Use Cases, User Stories, Why</a></li>
+<li><a class="reference internal" href="#curriculagraph">CurriculaGraph</a></li>
+<li><a class="reference internal" href="#stem-kiosk-roadmap-phase-1">STEM Kiosk Roadmap: Phase 1</a></li>
+<li><a class="reference internal" href="#memes">Memes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tools">Tools</a><ul>
+<li><a class="reference internal" href="#programming-languages">Programming Languages</a><ul>
+<li><a class="reference internal" href="#python">Python</a></li>
+<li><a class="reference internal" href="#bash">Bash</a></li>
+<li><a class="reference internal" href="#make">Make</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ides">IDEs</a><ul>
+<li><a class="reference internal" href="#vim">Vim</a></li>
+<li><a class="reference internal" href="#vscode">VSCode</a><ul>
+<li><a class="reference internal" href="#vscode-dev">vscode.dev</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#devcontainer-json">devcontainer.json</a><ul>
+<li><a class="reference internal" href="#vscode-dev-containers">vscode Dev Containers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#screencasting-tools-review">Screencasting Tools review</a><ul>
+<li><a class="reference internal" href="#obs-studio">OBS Studio</a></li>
+<li><a class="reference internal" href="#gpu-screen-recorder">GPU Screen Recorder</a></li>
+<li><a class="reference internal" href="#t-rec-rs">t-rec-rs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#show-keys-pressed-in-the-screencast">Show keys pressed in the screencast</a><ul>
+<li><a class="reference internal" href="#screenkey">screenkey</a></li>
+<li><a class="reference internal" href="#showmethekey">showmethekey</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#text-based-screencast-tools">Text-based screencast tools</a><ul>
+<li><a class="reference internal" href="#asciinema">asciinema</a></li>
+<li><a class="reference internal" href="#asciifx">asciifx</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#chromebook">Chromebook</a><ul>
+<li><a class="reference internal" href="#coding-on-a-chromebook">Coding on a Chromebook</a></li>
+<li><a class="reference internal" href="#chromeos-flex-vm-w-qemu">ChromeOS Flex VM w/ QEMU</a></li>
+<li><a class="reference internal" href="#android-apps-for-python-and-data-science">Android apps for Python and Data Science</a><ul>
+<li><a class="reference internal" href="#termux">Termux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="index.html" title="stemkiosk documentation" accesskey="P">previous </a></li>
+              <li><a href="topics/index.html" title="Topics in STEM" accesskey="N">next </a></li>
+              <li><a href="genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="_sources/readme.md.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-sm-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">STEM kiosk project</a><ul>
+<li><a class="reference internal" href="#roadmap">Roadmap</a><ul>
+<li><a class="reference internal" href="#screencast-recording-setup">screencast recording setup</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-cases-user-stories-why">Use Cases, User Stories, Why</a></li>
+<li><a class="reference internal" href="#curriculagraph">CurriculaGraph</a></li>
+<li><a class="reference internal" href="#stem-kiosk-roadmap-phase-1">STEM Kiosk Roadmap: Phase 1</a></li>
+<li><a class="reference internal" href="#memes">Memes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tools">Tools</a><ul>
+<li><a class="reference internal" href="#programming-languages">Programming Languages</a><ul>
+<li><a class="reference internal" href="#python">Python</a></li>
+<li><a class="reference internal" href="#bash">Bash</a></li>
+<li><a class="reference internal" href="#make">Make</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ides">IDEs</a><ul>
+<li><a class="reference internal" href="#vim">Vim</a></li>
+<li><a class="reference internal" href="#vscode">VSCode</a><ul>
+<li><a class="reference internal" href="#vscode-dev">vscode.dev</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#devcontainer-json">devcontainer.json</a><ul>
+<li><a class="reference internal" href="#vscode-dev-containers">vscode Dev Containers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#screencasting-tools-review">Screencasting Tools review</a><ul>
+<li><a class="reference internal" href="#obs-studio">OBS Studio</a></li>
+<li><a class="reference internal" href="#gpu-screen-recorder">GPU Screen Recorder</a></li>
+<li><a class="reference internal" href="#t-rec-rs">t-rec-rs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#show-keys-pressed-in-the-screencast">Show keys pressed in the screencast</a><ul>
+<li><a class="reference internal" href="#screenkey">screenkey</a></li>
+<li><a class="reference internal" href="#showmethekey">showmethekey</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#text-based-screencast-tools">Text-based screencast tools</a><ul>
+<li><a class="reference internal" href="#asciinema">asciinema</a></li>
+<li><a class="reference internal" href="#asciifx">asciifx</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#chromebook">Chromebook</a><ul>
+<li><a class="reference internal" href="#coding-on-a-chromebook">Coding on a Chromebook</a></li>
+<li><a class="reference internal" href="#chromeos-flex-vm-w-qemu">ChromeOS Flex VM w/ QEMU</a></li>
+<li><a class="reference internal" href="#android-apps-for-python-and-data-science">Android apps for Python and Data Science</a><ul>
+<li><a class="reference internal" href="#termux">Termux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">STEM kiosk project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#roadmap">Roadmap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#screencast-recording-setup">screencast recording setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#use-cases-user-stories-why">Use Cases, User Stories, Why</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#curriculagraph">CurriculaGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stem-kiosk-roadmap-phase-1">STEM Kiosk Roadmap: Phase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memes">Memes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#tools">Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#programming-languages">Programming Languages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bash">Bash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make">Make</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ides">IDEs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vim">Vim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vscode">VSCode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vscode-dev">vscode.dev</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#devcontainer-json">devcontainer.json</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vscode-dev-containers">vscode Dev Containers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#screencasting-tools-review">Screencasting Tools review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#obs-studio">OBS Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gpu-screen-recorder">GPU Screen Recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#t-rec-rs">t-rec-rs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#show-keys-pressed-in-the-screencast">Show keys pressed in the screencast</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#screenkey">screenkey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showmethekey">showmethekey</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#text-based-screencast-tools">Text-based screencast tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#asciinema">asciinema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asciifx">asciifx</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chromebook">Chromebook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coding-on-a-chromebook">Coding on a Chromebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chromeos-flex-vm-w-qemu">ChromeOS Flex VM w/ QEMU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android-apps-for-python-and-data-science">Android apps for Python and Data Science</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#termux">Termux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="topics/index.html">Topics in STEM</a></li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">stemkiosk documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="topics/index.html"
+                          title="next chapter">Topics in STEM</a></p>
+  </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+
+<div class="widget navlinks">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/readme.md.txt"
+            rel="nofollow"
+            target="_blank">Source (.md)</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/blob/main/docs/readme.md"
+            rel="nofollow"
+            target="_blank">Source</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/edit/main/docs/readme.md"
+            rel="nofollow"
+            target="_blank">Edit</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/commits/main/docs/readme.md"
+             rel="nofollow"
+             target="_blank">History</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/blame/main/docs/readme.md"
+             rel="nofollow"
+             target="_blank">Annotate</a></li>
+  </ul>
+</div>
+<div class="widget srclinks highlight">
+  <h3>Source</h3>
+  <p><a href="https://github.com/westurner/stemkiosk">github.com/westurner/stemkiosk</a>
+      / <a href="https://github.com/westurner/stemkiosk/tree/main"
+                rel="nofollow"
+                target="_blank"
+                font="monospace">main</a>
+  </p>
+  <ul>
+    <li><pre>git clone https://github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone ssh://git@github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone git://github.com/westurner/stemkiosk</pre></li>
+  </ul>
+</div><!--<div class="widget">
+    <h3><a href=""></a></h3>
+    <ul>
+        <li><a href=""></a></li>
+    </ul>
+</div>-->
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="stem-kiosk-project">
+<h1>STEM kiosk project<a class="headerlink" href="#stem-kiosk-project" title="Permalink to this heading">¶</a></h1>
+<section id="roadmap">
+<h2>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>stemkiosk: screencast videos to demo arithmetic and other topics in jupyter notebooks and as <code class="docutils literal notranslate"><span class="pre">.cast</span></code> ASCII casts</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> create a github org account</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> create a youtube channel</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> create content</p></li>
+<li><p>names:</p>
+<ul>
+<li><p><strong>stemkiosk</strong></p></li>
+<li><p>stemnotebooks</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>curriculumtool: curriculum graph tool for coverage</p>
+<ul>
+<li><p>create and validate YAML-LD files for each curriculum item</p>
+<ul>
+<li><p>create new from template</p></li>
+<li><p>spec: <a class="reference external" href="http://schema.org">schema.org</a> classes and properties</p>
+<ul>
+<li><p><a class="reference external" href="http://schema.org/CreativeWork">schema.org/CreativeWork</a></p></li>
+<li><p><a class="reference external" href="http://schema.org/name">schema.org/name</a></p></li>
+<li><p><a class="reference external" href="http://schema.org/educationalAlignment">schema.org/educationalAlignment</a></p></li>
+<li><p><a class="reference external" href="http://schema.org/about">schema.org/about</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>example:</p>
+<ul>
+<li><p>adding numbers in notebooks ex:depends_upon how to create a notebook</p></li>
+<li><p>how to create a notebook ex:depends_upon / ex:is_satisfied_by / ex:is_covered_by:</p>
+<ul>
+<li><p>create a notebook in jupyter notebook</p></li>
+<li><p>create a notebook in jupyter lab</p></li>
+<li><p>create a notebook in colab</p></li>
+<li><p>create a notebook in vscode</p></li>
+<li><p>create a notebook in vscode.dev</p></li>
+<li><p>create a notebook from markdown with jupytext</p></li>
+<li><p>create a notebook from python with jupytext</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>generate reports from the graph nodes and edges:</p>
+<ul>
+<li><p>graph traversals through the topologically-sorted curricula items</p></li>
+<li><p>video playlists</p></li>
+<li><p>combined video sequence(s) that inductively present the material</p>
+<ul>
+<li><p>e.g. a transitive sort with <code class="docutils literal notranslate"><span class="pre">tsort</span></code> should present the requisite
+material first, if there are enough edges between the
+curriculum items</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="screencast-recording-setup">
+<h3>screencast recording setup<a class="headerlink" href="#screencast-recording-setup" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>create a screencast user</p></li>
+<li><p>create a screencast container or vm</p></li>
+<li><p>set the screen resolution and font dpi</p></li>
+<li><p>record browser interaction test cases with:</p>
+<ul>
+<li><p>selenium ide, TODO […]</p></li>
+</ul>
+</li>
+<li><p>generate a screencast script from a test case</p>
+<ul>
+<li><p>manual script for human to record with human typing speed</p></li>
+<li><p>automated script with random typing speed variation</p></li>
+<li><p>titlecards and any other hints for editing</p></li>
+</ul>
+</li>
+<li><p>add text titlecards</p></li>
+<li><p>generate description of video from curriculumtool metadata</p></li>
+<li><p>zoom in and out</p></li>
+<li><p>display touch and click events:</p>
+<ul>
+<li><p>android: default screen recorder</p></li>
+</ul>
+</li>
+<li><p>display key pressed events:</p>
+<ul>
+<li><p>linux: screenkey</p></li>
+</ul>
+</li>
+<li><p>OBS: Open _ Studio</p>
+<ul>
+<li><p>video bitrate:</p>
+<ul>
+<li><p>youtube video upload bitrate recommendation: 20000 ?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>asciicinema or similar</p>
+<ul>
+<li><p>ascii terminal session replay</p></li>
+<li><p>probably similar to notebooks for same,
+so maybe useful for getting the tutorial concepts written in code somewhere</p></li>
+</ul>
+</li>
+<li><p>manim-jupyter-simulator</p>
+<ul>
+<li><p>generate a manim Python script to replay a notebook in a manim video</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="use-cases-user-stories-why">
+<h2>Use Cases, User Stories, Why<a class="headerlink" href="#use-cases-user-stories-why" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Teach Computer Math, Coding, and STEM at a Science Fair -style event</p>
+<ul>
+<li><p>Passive Video</p>
+<ul>
+<li><p>Play a Video on repeat on a spare TV</p></li>
+<li><p>Play a Video playlist on repeat on a spare TV</p></li>
+<li><p>Play a Playlist of youtube videos on repeat on spare TV</p>
+<ul>
+<li><p>show the shorturl of each video as a subtitle</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Active Interaction</p>
+<ul>
+<li><p>Jupyterlite in a browser tab that gets closed and re-opened after
+a period of inactivity</p></li>
+<li><p>Jupyter in a container that gets shutdown and recreated from a
+container image after a period of inactivity</p>
+<ul>
+<li><p>This is how Google Colab and BinderHub and github.dev
+(and gitpod, devpod, kasm,) work</p></li>
+<li><p>BinderHub: User clicks a ‘launch in Binder’ badge image,
+container is created in the cloud (repo2docker) with everything
+installed,
+the user is logged in and redirected to Jupyter notebook or
+JupyterLab running in the container.
+for the user from a git repo, and then logs them into the
+container, and when it times out, the container is destroyed</p></li>
+<li><p>Github.dev, gitpod etc; basically the same thing</p></li>
+<li><p><a class="reference external" href="https://mybinder.org/">https://mybinder.org/</a> works)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="curriculagraph">
+<h2>CurriculaGraph<a class="headerlink" href="#curriculagraph" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Tools</p>
+<ul>
+<li><p>Notebooks: Create a notebook in {JupyterLite, Colab, vscode.dev,}</p></li>
+<li><p>Python: Arithmetic in Python</p></li>
+<li><p>Git: Learn git with <a class="reference external" href="http://learngitbranching.js.org">learngitbranching.js.org</a></p></li>
+<li></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="stem-kiosk-roadmap-phase-1">
+<h2>STEM Kiosk Roadmap: Phase 1<a class="headerlink" href="#stem-kiosk-roadmap-phase-1" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tree<span class="w"> </span>./stemkiosk/<span class="w">   </span><span class="c1"># TODO: re-run this</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stemkiosk</span><span class="o">/</span>     <span class="c1"># project directory</span>
+<span class="o">./.</span><span class="n">git</span><span class="o">/</span>        <span class="c1"># learngitbranching.js.org</span>
+
+
+<span class="o">./</span><span class="n">README</span><span class="o">.</span><span class="n">md</span>    <span class="c1"># Markdown or</span>
+<span class="o">./</span><span class="n">README</span><span class="o">.</span><span class="n">rst</span>   <span class="c1"># ReStructuredText</span>
+<span class="o">./</span><span class="n">docs</span><span class="o">/</span>        <span class="c1"># Documentation; &quot;Read The Docs&quot;</span>
+<span class="o">./</span><span class="n">data</span><span class="o">/</span>
+<span class="o">./</span><span class="n">notebooks</span><span class="o">/</span>
+<span class="o">./</span><span class="n">scripts</span><span class="o">/</span>
+<span class="o">./</span><span class="n">scripts</span><span class="o">/</span>
+<span class="o">./</span><span class="n">screencasts</span><span class="o">/</span>
+<span class="o">./</span><span class="n">COPYING</span>      <span class="c1">#</span>
+<span class="o">./</span><span class="n">LICENSE</span>      <span class="c1"># </span>
+</pre></div>
+</div>
+</section>
+<section id="memes">
+<h2>Memes<a class="headerlink" href="#memes" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>STEM AI is the Future
+You should learn to code</p></li>
+<li><p>STEM AI is the Future
+Everybody Codes Now</p></li>
+</ul>
+<p>.</p>
+<ul class="simple">
+<li><p>Stem AI is the Future
+How to Python and Shell</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tools">
+<h1>Tools<a class="headerlink" href="#tools" title="Permalink to this heading">¶</a></h1>
+<section id="programming-languages">
+<h2>Programming Languages<a class="headerlink" href="#programming-languages" title="Permalink to this heading">¶</a></h2>
+<section id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="bash">
+<h3>Bash<a class="headerlink" href="#bash" title="Permalink to this heading">¶</a></h3>
+</section>
+<section id="make">
+<h3>Make<a class="headerlink" href="#make" title="Permalink to this heading">¶</a></h3>
+</section>
+</section>
+<section id="ides">
+<h2>IDEs<a class="headerlink" href="#ides" title="Permalink to this heading">¶</a></h2>
+<section id="vim">
+<h3>Vim<a class="headerlink" href="#vim" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Src: <a class="reference external" href="https://github.com/vim/vim">https://github.com/vim/vim</a></p></li>
+<li><p>Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Vim_(text_editor)">https://en.wikipedia.org/wiki/Vim_(text_editor)</a></p></li>
+<li><p>Homepage: <a class="reference external" href="https://www.vim.org/">https://www.vim.org/</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://www.vim.org/docs.php">https://www.vim.org/docs.php</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://github.com/vim/vim/blob/master/runtime/tutor/en/vim-01-beginner.tutor">https://github.com/vim/vim/blob/master/runtime/tutor/en/vim-01-beginner.tutor</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://learnxinyminutes.com/docs/vim/">https://learnxinyminutes.com/docs/vim/</a></p></li>
+<li><p>Src: git <a class="reference external" href="https://github.com/vim/vim">https://github.com/vim/vim</a></p></li>
+</ul>
+<p>ViM (Vi-iMproved) is an open source programmers’ text editor written in C
+that’s available on very many platforms.</p>
+<ul class="simple">
+<li><p>Vim help can be accessed with <code class="docutils literal notranslate"><span class="pre">:help</span></code> and <code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">help</span></code>
+(Press <code class="docutils literal notranslate"><span class="pre">&lt;esc&gt;</span></code>, Type <code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">help</span></code>, Press Enter)</p></li>
+<li><p>Vi is almost always installed on Linux and BSD boxes.</p></li>
+<li><p>Vi is often included with Busybox.</p></li>
+<li><p>Vi and Vim are installed with OSX.</p></li>
+<li><p>Vi and Vim are installed by default on many Linux
+Distributions.</p></li>
+<li><p>Vim runs in a terminal, over SSH, and with a GUI window manager
+(Gvim, Macvim)</p></li>
+<li><p>Vim configuration is written in the vim language.</p></li>
+<li><p>Vim reads a few vimrc configuration files in sequence (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">vimrc</span></code>)</p></li>
+<li><p>GVim is Vim for Gnome window manager</p></li>
+<li><p>GVim reads a few vimrc configuration files in sequence (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">gvimrc</span></code>)</p></li>
+<li><p>MacVim is Vim for OSX</p></li>
+<li><p>One way to write changes and exit vim: <code class="docutils literal notranslate"><span class="pre">:wq!</span></code>
+(Press <code class="docutils literal notranslate"><span class="pre">&lt;esc&gt;</span></code>, Type <code class="docutils literal notranslate"><span class="pre">:wq!</span></code>, Press Enter)</p></li>
+<li><p>There are many plugins for vim.</p></li>
+<li><p>NERDTree is an example of a vim plugin:
+<a class="reference external" href="https://github.com/scrooloose/nerdtree">https://github.com/scrooloose/nerdtree</a> (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">nerdtree</span></code>)</p></li>
+<li><p>SpaceVim and westurner/dotvim include the NERDtree plugin</p></li>
+<li><p>Vim keyboard shortcuts are calling mappings.</p></li>
+<li><p>Vim mappings are defined in a vimrc file.</p></li>
+<li><p>Examples of vim mappings:
+<code class="docutils literal notranslate"><span class="pre">\e</span></code> opens NERDTree, <code class="docutils literal notranslate"><span class="pre">\E</span></code> opens NERDTree to the current file</p></li>
+<li><p>Vim mappings can be defined for different vim modes:
+<code class="docutils literal notranslate"><span class="pre">:map</span> <span class="pre">\e</span></code> (command mode), <code class="docutils literal notranslate"><span class="pre">:imap</span> <span class="pre">\e</span></code> (insert mode) (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">modes</span></code>)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">i</span></code> or <code class="docutils literal notranslate"><span class="pre">a</span></code> while in command mode to enter
+insert or append mode (<code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">vim-modes</span></code>)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code> to return to command mode</p></li>
+</ul>
+<p>Browser extensions with vim-style keyboard shortcuts:</p>
+<ul class="simple">
+<li><p>Vimium (Chrome)</p></li>
+<li><p>Vimperator (Firefox)</p></li>
+<li><p>Wasavi (Chrome, Opera, Firefox)</p></li>
+</ul>
+<p>A number of web apps support vim-style keyboard shortcuts
+like <code class="docutils literal notranslate"><span class="pre">j</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span></code> for up and down:</p>
+<ul class="simple">
+<li><p>GMail (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p></li>
+<li><p>Facebook (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p></li>
+<li><p>X (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p></li>
+<li><p>GitHub (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help, <code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code> to close help)</p></li>
+</ul>
+<p>Games with support for vim-style keyboard shortcuts:</p>
+<ul class="simple">
+<li><p>vimtutor: <code class="docutils literal notranslate"><span class="pre">:e</span> <span class="pre">$VIMRUNTIME/tutor/en/vim-01-beginner.tutor</span></code></p></li>
+<li><p><a class="reference external" href="https://vim-adventures.com/">https://vim-adventures.com/</a></p></li>
+</ul>
+<p>IDEs with support for vim-style keyboard shortcuts:</p>
+<ul class="simple">
+<li><p>vscode, <a class="reference external" href="https://vscode.dev/">https://vscode.dev/</a>, <a class="reference external" href="https://github.dev/">https://github.dev/</a>, gitpod, devpod, code-server</p></li>
+<li><p>jupyterlab, jupyterlite</p></li>
+<li><p>colab</p></li>
+<li><p>neovim</p></li>
+<li><p>vim</p></li>
+<li><p>vi (busybox (initrd,))</p></li>
+</ul>
+<p>How to access help in vim:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:help</span></code> – open help in a split (<code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code>, then <code class="docutils literal notranslate"><span class="pre">:help</span></code>, then <strong>Enter</strong> (<code class="docutils literal notranslate"><span class="pre">&lt;CR&gt;</span></code>); <code class="docutils literal notranslate"><span class="pre">:q</span></code> to close)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C-w-j</span></code> – focus a window down ((<code class="docutils literal notranslate"><span class="pre">&lt;Esc&gt;</span></code> to exit insert or append mode), then <code class="docutils literal notranslate"><span class="pre">&lt;Ctrl&gt;&lt;w&gt;</span> <span class="pre">&lt;h/j/k/l&gt;</span></code>; <code class="docutils literal notranslate"><span class="pre">:map</span> <span class="pre">&lt;C-W&gt;J</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-]</span></code> – follow (help,) link under cursor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-O</span></code> – go back</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-I</span></code> – go forward</p></li>
+</ul>
+</section>
+<section id="vscode">
+<h3>VSCode<a class="headerlink" href="#vscode" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Wikipedia: <a class="reference external" href="https://en.wikipedia.org/wiki/Visual_Studio_Code">https://en.wikipedia.org/wiki/Visual_Studio_Code</a></p></li>
+<li><p>Homepage: <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/Microsoft/vscode">https://github.com/Microsoft/vscode</a></p></li>
+<li><p>Download: <a class="reference external" href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></p></li>
+<li><p>ChocolateyPkg: <a class="reference external" href="https://chocolatey.org/packages/vscode">https://chocolatey.org/packages/vscode</a></p></li>
+<li><p>BrewPkg: <a class="reference external" href="https://formulae.brew.sh/cask/visual-studio-code">https://formulae.brew.sh/cask/visual-studio-code</a></p></li>
+<li><p>FlatpakPkg: <a class="reference external" href="https://flathub.org/apps/com.visualstudio.code">https://flathub.org/apps/com.visualstudio.code</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/">https://code.visualstudio.com/docs/</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks">https://code.visualstudio.com/docs/getstarted/tips-and-tricks</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/keybindings">https://code.visualstudio.com/docs/getstarted/keybindings</a></p></li>
+</ul>
+<p>VSCode (<em>Visual Studio Code</em>) is an open source programmer’s text editor
+written in TypeScript, Javascript, and CSS
+that’s available for Windows, Mac, and Linux.</p>
+<ul class="simple">
+<li><p>VSCode extensions are written in JS and TS.</p></li>
+<li><p>VSCode has collaborative editing features with multiple cursors.</p></li>
+<li><p>VSCode and MS Visual Studio are different projects.</p></li>
+<li><p>VSCode supports many of the Visual Studio keyboard shortcuts.</p></li>
+<li><p>There is an official Vim extension for VSCode.</p></li>
+<li><p>VSCode takes inspiration from the NERDTree, CtrlP, and TagBar vim extensions.</p></li>
+<li><p>The vscode Outline view is below the open directory in the Explorer tab of the sidebar.</p></li>
+<li><p>VScode keyboard shortcuts for Linux and Windows:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-p</span></code> or <code class="docutils literal notranslate"><span class="pre">F1</span></code> opens the Command Palette</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-p</span></code> opens the Go to File dialogue
+(which lists all available commands based on your current context)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Space</span></code> opens the context-sensitive Intellisense code completion</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-`</span></code>  (Ctrl-backtick) toggles the Terminal open and closed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-D</span></code> (or <code class="docutils literal notranslate"><span class="pre">Enter</span></code>) advances to the next <code class="docutils literal notranslate"><span class="pre">Ctrl-F</span></code> search match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-.</span></code> opens breadcrumbs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-B</span></code> toggles the sidebar</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-E</span></code> toggles or sets focus to Explorer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-G</span></code> toggles or sets focus to Source Control (git)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-V</span></code> opens a Markdown HTML preview</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-w</span></code> closes a tab</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Shift-Alt</span></code> + Click-and-Drag selects a rectangle of rows and/or columns of characters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Alt-Up/Down</span></code> moves the current line or selection up or down</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Home</span></code> and <code class="docutils literal notranslate"><span class="pre">End</span></code> (<code class="docutils literal notranslate"><span class="pre">Fn-Left</span></code> and <code class="docutils literal notranslate"><span class="pre">Fn-Right</span></code>) go the the beginning and end of a line</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F5</span></code> runs the file or the debugger</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Shift-F5</span></code> stops the debugger</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F11</span></code> / <code class="docutils literal notranslate"><span class="pre">Shift-F11</span></code> Step into/out</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F10</span></code> Step over</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-K</span> <span class="pre">Ctrl-R</span></code> or <code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> + “Help: Keyboard Shortcuts References”
+opens the <em>online</em> vscode keyboard shortcuts document for Win/Mac/Lin:</p>
+<ul>
+<li><p><a class="reference external" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf</a> <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf</a> <code class="docutils literal notranslate"><span class="pre">⌘</span></code></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf</a> <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code></p></li>
+</ul>
+</li>
+<li><p>VScode keybindings docs: <a class="reference external" href="https://code.visualstudio.com/docs/getstarted/keybindings">https://code.visualstudio.com/docs/getstarted/keybindings</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Remote Tunnels:” &gt; “Get started with tunnels”</p>
+<ul>
+<li><p><a class="reference external" href="https://aka.ms/remote-tunnels-doc">https://aka.ms/remote-tunnels-doc</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Remote-SSH:” &gt; “Help”, “Settings”</p>
+<ul>
+<li><p><a class="reference external" href="https://aka.ms/vscode-remote/ssh">https://aka.ms/vscode-remote/ssh</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev containers:” &gt; “Help”</p>
+<ul>
+<li><p><a class="reference external" href="https://aka.ms/vscode-remote/containers">https://aka.ms/vscode-remote/containers</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="vscode-dev">
+<h4>vscode.dev<a class="headerlink" href="#vscode-dev" title="Permalink to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>Homepage: <a class="reference external" href="https://vscode.dev/">https://vscode.dev/</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/editor/vscode-web">https://code.visualstudio.com/docs/editor/vscode-web</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/api/extension-guides/web-extensions">https://code.visualstudio.com/api/extension-guides/web-extensions</a></p></li>
+</ul>
+<p>Visual Studio Code for the Web (vscode.dev) is a WASM (WebAssembly)
+build of <code class="docutils literal notranslate"><span class="pre">vscode</span></code>_ that runs in a browser,
+optionally without connecting to a <code class="docutils literal notranslate"><span class="pre">code-server</span></code> on a server.</p>
+<ul class="simple">
+<li><p>vscode.dev works in Chrome on Chromebooks.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> to open Command Palette keyboard shortcut doesn’t work in Firefox.</p></li>
+<li><p>some vscode extensions support vscode.dev</p></li>
+</ul>
+<p>Extensions that work in vscode.dev on a Chromebook:</p>
+<ul class="simple">
+<li><p>vscode-pyodide: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=joyceerhl.vscode-pyodide">https://marketplace.visualstudio.com/items?itemName=joyceerhl.vscode-pyodide</a></p></li>
+<li><p>Pyodide Runner: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=tym-inc.pyodide">https://marketplace.visualstudio.com/items?itemName=tym-inc.pyodide</a></p></li>
+<li><p>Python: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">https://marketplace.visualstudio.com/items?itemName=ms-python.python</a></p></li>
+<li><p>Jupyter: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter</a></p></li>
+<li><p>container-wasm: <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ktock.container-wasm">https://marketplace.visualstudio.com/items?itemName=ktock.container-wasm</a></p>
+<ul>
+<li><p>container2wasm: <a class="reference external" href="https://github.com/ktock/container2wasm">https://github.com/ktock/container2wasm</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="devcontainer-json">
+<h3>devcontainer.json<a class="headerlink" href="#devcontainer-json" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Homepage: <a class="reference external" href="https://containers.dev/">https://containers.dev/</a></p></li>
+<li><p>Spec: <a class="reference external" href="https://containers.dev/implementors/json_reference/">https://containers.dev/implementors/json_reference/</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers/spec">https://github.com/devcontainers/spec</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers/features/tree/main/src">https://github.com/devcontainers/features/tree/main/src</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers/cli">https://github.com/devcontainers/cli</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/devcontainers">https://github.com/devcontainers</a></p></li>
+</ul>
+<p>Devcontainer.json is a specification for specifying one or more containers to run;
+specifically for IDEs like <span class="xref std std-ref">vscode</span>.</p>
+<section id="vscode-dev-containers">
+<h4>vscode Dev Containers<a class="headerlink" href="#vscode-dev-containers" title="Permalink to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>Docs: <a class="reference external" href="https://code.visualstudio.com/docs/devcontainers/containers">https://code.visualstudio.com/docs/devcontainers/containers</a></p></li>
+</ul>
+<p>Keyboard Shortcuts for vscode Dev Containers:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers:”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers: Open Container Configuration File”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers: Open Folder in Container”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift-P</span></code> “Dev Containers: Open Workspace in Container”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift</span> <span class="pre">P</span></code> “Dev Containers: Reopen Folder Locally”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ctrl-Shift</span> <span class="pre">P</span></code> “Dev Containers: Help”</p></li>
+</ul>
+<p>Devcontainer Features:</p>
+<ul class="simple">
+<li><p>Devcontainer Features are composable; you can add multiple features to a <code class="docutils literal notranslate"><span class="pre">devcontainer.json</span></code>.</p></li>
+<li><p>Devcontainer Features split configuration that can be just one <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> into many JSON &amp; <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>s.</p></li>
+<li><p>An SBOM tool could discover the versions of software installed in a devcontainer
+by: instructions in the devcontainer.json, instructions in the Dockerfile, Devcontainer Features,
+or other.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="screencasting-tools-review">
+<h2>Screencasting Tools review<a class="headerlink" href="#screencasting-tools-review" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Lists, Reviews</p>
+<ul>
+<li><p>awesome-terminal-recorder
+<a class="reference external" href="https://github.com/orangekame3/awesome-terminal-recorder">https://github.com/orangekame3/awesome-terminal-recorder</a></p></li>
+<li><p><a class="reference external" href="https://www.linuxlinks.com/best-free-open-source-terminal-session-recording/">https://www.linuxlinks.com/best-free-open-source-terminal-session-recording/</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="obs-studio">
+<h3>OBS Studio<a class="headerlink" href="#obs-studio" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Web: <a class="reference external" href="https://obsproject.com/">https://obsproject.com/</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/obsproject/obs-studio">https://github.com/obsproject/obs-studio</a></p></li>
+<li><p>FlatpakPkg: <a class="reference external" href="https://flathub.org/apps/com.obsproject.Studio">https://flathub.org/apps/com.obsproject.Studio</a></p></li>
+<li><p>Description: OBS Studio is an open source video recording and live streaming app
+for Windows, Mac, and Linux that supports recording screencasts</p></li>
+</ul>
+</section>
+<section id="gpu-screen-recorder">
+<h3>GPU Screen Recorder<a class="headerlink" href="#gpu-screen-recorder" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Src: <a class="reference external" href="https://git.dec05eba.com/gpu-screen-recorder">https://git.dec05eba.com/gpu-screen-recorder</a></p></li>
+<li><p>Src: <a class="reference external" href="https://git.dec05eba.com/gpu-screen-recorder-gtk/">https://git.dec05eba.com/gpu-screen-recorder-gtk/</a></p></li>
+<li><p>FlatpakPkg: <a class="reference external" href="https://flathub.org/apps/com.dec05eba.gpu_screen_recorder">https://flathub.org/apps/com.dec05eba.gpu_screen_recorder</a></p></li>
+<li><p>GPU Screen Recorder is an open source screeen recording app that
+does GPU hardware offloading for encoding,</p></li>
+</ul>
+</section>
+<section id="t-rec-rs">
+<h3>t-rec-rs<a class="headerlink" href="#t-rec-rs" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Src: <a class="reference external" href="https://github.com/sassman/t-rec-rs">https://github.com/sassman/t-rec-rs</a></p></li>
+<li><p>t-rec doesn’t support wayland, but does support X11:
+<a class="reference external" href="https://github.com/sassman/t-rec-rs/issues/211#issuecomment-2606297216">https://github.com/sassman/t-rec-rs/issues/211#issuecomment-2606297216</a></p></li>
+</ul>
+</section>
+</section>
+<section id="show-keys-pressed-in-the-screencast">
+<h2>Show keys pressed in the screencast<a class="headerlink" href="#show-keys-pressed-in-the-screencast" title="Permalink to this heading">¶</a></h2>
+<section id="screenkey">
+<h3>screenkey<a class="headerlink" href="#screenkey" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Src: <a class="reference external" href="https://gitlab.com/screenkey/screenkey">https://gitlab.com/screenkey/screenkey</a></p></li>
+<li><p>screenkey doesn’t support wayland, but does support X11:
+<a class="reference external" href="https://gitlab.com/screenkey/screenkey/-/issues/61">https://gitlab.com/screenkey/screenkey/-/issues/61</a></p></li>
+</ul>
+</section>
+<section id="showmethekey">
+<h3>showmethekey<a class="headerlink" href="#showmethekey" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Src: <a class="reference external" href="https://github.com/AlynxZhou/showmethekey">https://github.com/AlynxZhou/showmethekey</a></p></li>
+</ul>
+</section>
+</section>
+<section id="text-based-screencast-tools">
+<h2>Text-based screencast tools<a class="headerlink" href="#text-based-screencast-tools" title="Permalink to this heading">¶</a></h2>
+<section id="asciinema">
+<h3>asciinema<a class="headerlink" href="#asciinema" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/topics/asciinema">https://github.com/topics/asciinema</a></p></li>
+<li><p>Asciinema is an open source screencast recorder that generates a .cast JSON file containing the log of keyboard button presses.</p></li>
+<li><p>Asciinema v1 was written in Python.</p></li>
+<li><p>Asciinema v2 is written in Rust.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.cast</span></code> v2 file format is JSON.</p></li>
+<li><p>Asciinema calls <code class="docutils literal notranslate"><span class="pre">agg</span></code> (Rust) to generate <code class="docutils literal notranslate"><span class="pre">.gif</span></code> from a <code class="docutils literal notranslate"><span class="pre">.cast</span></code> file.</p></li>
+<li><p>TODO: generates an <em>SVG</em> screencast from a <code class="docutils literal notranslate"><span class="pre">.cast</span></code> file with minimal file size
+(because each terminal character is encoded as an SVG symbol)</p></li>
+</ul>
+</section>
+<section id="asciifx">
+<h3>asciifx<a class="headerlink" href="#asciifx" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Src: <a class="reference external" href="https://github.com/apparebit/asciifx">https://github.com/apparebit/asciifx</a></p></li>
+<li><p>Src: <a class="reference external" href="https://github.com/apparebit/asciifx/tree/boss/asciifx">https://github.com/apparebit/asciifx/tree/boss/asciifx</a></p></li>
+<li><p>Description: asciifx is an open source ASCII screencast tool
+which generates a .cast file from a .py file with <code class="docutils literal notranslate"><span class="pre">#[pragma]</span></code> comments.</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>ensurepip<span class="w"> </span>-U<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pipx<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pipx<span class="w"> </span>install<span class="w"> </span>--include-deps<span class="w"> </span>asciifx
+python<span class="w"> </span>-m<span class="w"> </span>asciifx<span class="w"> </span>--width<span class="w"> </span><span class="m">80</span><span class="w"> </span>--height<span class="w"> </span><span class="m">24</span><span class="w"> </span>-o<span class="w"> </span>output.cast<span class="w"> </span>scripts/math/arithmetic.py
+</pre></div>
+</div>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> add syntax highlighting to asciifx</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/apparebit/asciifx/issues/1">https://github.com/apparebit/asciifx/issues/1</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="chromebook">
+<h2>Chromebook<a class="headerlink" href="#chromebook" title="Permalink to this heading">¶</a></h2>
+<section id="coding-on-a-chromebook">
+<h3>Coding on a Chromebook<a class="headerlink" href="#coding-on-a-chromebook" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Chromebooks support HTML, JS, and WASM.</p></li>
+<li><p>Some Chromebooks support Android apps from the Play Store.</p></li>
+<li><p>Some Chromebooks support containers, but not for student users.</p></li>
+<li><p>Chromebooks support WebExtensions for Chrome, but not for student users.</p></li>
+<li><p>Chromebooks support SSH, but not for student users.</p></li>
+<li><p>Web Terminals that work in Chrome on a Chromebook:</p>
+<ul>
+<li><p>Google Colab, Kaggle Kernels, GitHub.dev Codespaces</p></li>
+<li><p>Self-hosted: MoSH, JupyterLab Terminal</p></li>
+<li><p><a class="reference external" href="http://repl.it">repl.it</a></p></li>
+</ul>
+</li>
+<li><p><em>Inspect Element</em> (Devtools; Ctrl-Shift-I) is disabled on chromebooks
+for student users.</p>
+<ul>
+<li><p>jsfiddle, <a class="reference external" href="http://repl.it">repl.it</a></p></li>
+</ul>
+</li>
+<li><p>container2wasm compiles containers to WASM</p></li>
+</ul>
+</section>
+<section id="chromeos-flex-vm-w-qemu">
+<h3>ChromeOS Flex VM w/ QEMU<a class="headerlink" href="#chromeos-flex-vm-w-qemu" title="Permalink to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO: link to virt-manager/qemu-system-x86 script form ChromeOS flex that works with VNC but either the mouse or the GL graphics are borked; variations</p></li>
+<li><p>ChromeOS Flex doesn’t support containers or Android apps.</p>
+<ul>
+<li><p>Waydroid supports Android apps within a LineageOS x86 container.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="android-apps-for-python-and-data-science">
+<h3>Android apps for Python and Data Science<a class="headerlink" href="#android-apps-for-python-and-data-science" title="Permalink to this heading">¶</a></h3>
+<section id="termux">
+<h4>Termux<a class="headerlink" href="#termux" title="Permalink to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>PlayStore: <a class="reference external" href="https://play.google.com/store/apps/details?id=com.termux">https://play.google.com/store/apps/details?id=com.termux</a></p></li>
+<li><p>FDroid: <a class="reference external" href="https://f-droid.org/en/packages/com.termux/">https://f-droid.org/en/packages/com.termux/</a></p></li>
+<li><p>Docs: <a class="reference external" href="https://wiki.termux.com/wiki/Python">https://wiki.termux.com/wiki/Python</a></p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pkg<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pkg<span class="w"> </span>upgrade<span class="w"> </span><span class="se">\</span>
+pkg<span class="w"> </span>install<span class="w"> </span>python<span class="w"> </span>python-numpy<span class="w"> </span>matplotlib
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1">#pkg install build-essential</span>
+<span class="c1">#pkg install proot proot-distro</span>
+<span class="c1">#pkg install vim git sqlite bash</span>
+<span class="c1">#pkg install gitea</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/westurner/dotfiles/blob/develop/scripts/setup_conda_termux.sh">https://github.com/westurner/dotfiles/blob/develop/scripts/setup_conda_termux.sh</a></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">proot-distro</span></code></p></li>
+<li><p>TODO: test: Miniforge3 arm64</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav text-center">
+        <li><a href="index.html">stemkiosk  documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav text-center">
+      
+        <li><a href="index.html" title="stemkiosk documentation" >previous</a></li>
+        <li><a href="topics/index.html" title="Topics in STEM" >next</a></li>
+        <li><a href="genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2025, @stemkiosk.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.2.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

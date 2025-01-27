@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>docs/topics/math/arithmetic.py &mdash; stemkiosk  documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/asciinema-player_3.6.3.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/css/local.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/asciinema-player_3.6.3.js"></script>
+    <script type="text/javascript" src="../../../_static/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../../../_static/js/local.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="stemkiosk  documentation" href="../../../index.html" />
+    <link rel="up" title="Arithmetic" href="index.html" />
+    <link rel="prev" title="Arithmetic" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">stemkiosk  documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="index.html" title="Arithmetic" accesskey="P">previous </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../index.html" >Topics in STEM</a></li>
+              <li><a href="../index.html" >Math</a></li>
+              <li><a href="index.html" accesskey="U">Arithmetic</a></li>
+            
+            <li class="visible-xs"><a href="../../../_sources/topics/math/arithmetic/arithmetic.ipynb.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-sm-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html">STEM kiosk project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html#tools">Tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Topics in STEM</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Math</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Arithmetic</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docs/topics/math/arithmetic.py</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#arithmetic-py-cast">arithmetic.py.cast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#arithmetic-py">arithmetic.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Arithmetic</a></p>
+  </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+
+<div class="widget navlinks">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../../_sources/topics/math/arithmetic/arithmetic.ipynb.txt"
+            rel="nofollow"
+            target="_blank">Source (.ipynb)</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/blob/main/docs/topics/math/arithmetic/arithmetic.ipynb"
+            rel="nofollow"
+            target="_blank">Source</a></li>
+    <li><a href="https://github.com/westurner/stemkiosk/edit/main/docs/topics/math/arithmetic/arithmetic.ipynb"
+            rel="nofollow"
+            target="_blank">Edit</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/commits/main/docs/topics/math/arithmetic/arithmetic.ipynb"
+             rel="nofollow"
+             target="_blank">History</a></li>
+     <li><a href="https://github.com/westurner/stemkiosk/blame/main/docs/topics/math/arithmetic/arithmetic.ipynb"
+             rel="nofollow"
+             target="_blank">Annotate</a></li>
+  </ul>
+</div>
+<div class="widget srclinks highlight">
+  <h3>Source</h3>
+  <p><a href="https://github.com/westurner/stemkiosk">github.com/westurner/stemkiosk</a>
+      / <a href="https://github.com/westurner/stemkiosk/tree/main"
+                rel="nofollow"
+                target="_blank"
+                font="monospace">main</a>
+  </p>
+  <ul>
+    <li><pre>git clone https://github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone ssh://git@github.com/westurner/stemkiosk</pre></li>
+    <li><pre>git clone git://github.com/westurner/stemkiosk</pre></li>
+  </ul>
+</div><!--<div class="widget">
+    <h3><a href=""></a></h3>
+    <ul>
+        <li><a href=""></a></li>
+    </ul>
+</div>-->
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="docs-topics-math-arithmetic-py">
+<h1>docs/topics/math/arithmetic.py<a class="headerlink" href="#docs-topics-math-arithmetic-py" title="Permalink to this heading">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;World;--&#39;</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello world, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world, World;--&#39;&quot;!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1+1=&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="k">assert</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;1+1 should be 2, but&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+1+1= 2
+1+1=2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">==</span> <span class="mf">0.5</span>
+<span class="k">assert</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">f</span><span class="o">.</span><span class="n">numerator</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">f</span><span class="o">.</span><span class="n">denominator</span> <span class="o">==</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3333333333333333
+1/3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1/3&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># !</span>
+<span class="k">assert</span> <span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1/3&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/3
+6004799503160661/18014398509481984
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.5</span> <span class="o">==</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="k">assert</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.5</span> <span class="o">==</span> <span class="mi">3</span><span class="o">/</span><span class="mi">2</span>
+
+<span class="k">assert</span> <span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">==</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+
+<span class="k">assert</span> <span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span> <span class="o">==</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="k">assert</span> <span class="mi">7</span><span class="o">*</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">35</span>
+<span class="k">assert</span> <span class="mi">4</span><span class="o">*</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">12</span>
+<span class="k">assert</span> <span class="p">(</span><span class="mi">7</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">47</span>
+<span class="k">assert</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">21</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">numerator</span> <span class="o">*</span> <span class="n">b</span><span class="o">.</span><span class="n">denominator</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">numerator</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">denominator</span><span class="p">)</span> <span class="o">==</span> <span class="mi">47</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">.</span><span class="n">denominator</span> <span class="o">*</span> <span class="n">b</span><span class="o">.</span><span class="n">denominator</span> <span class="o">==</span> <span class="mi">21</span>
+<span class="k">assert</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="o">==</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">2</span><span class="o">**</span><span class="mi">2</span>
+<span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">6</span>
+<span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="mi">4</span> <span class="o">==</span> <span class="mi">8</span> <span class="o">==</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
+<span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="k">assert</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">6</span> <span class="o">==</span> <span class="mi">12</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">7</span> <span class="o">==</span> <span class="mi">14</span><span class="p">)</span>
+<span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="mi">8</span> <span class="o">==</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">2</span><span class="o">**</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">((</span><span class="s1">&#39;n&#39;</span><span class="p">,</span><span class="s1">&#39;2*n&#39;</span><span class="p">,</span> <span class="s1">&#39;2**n&#39;</span><span class="p">,</span> <span class="s1">&#39;n*n&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">))</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">numbers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">numbers</span><span class="p">))</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;2*n&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;2**n&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;n*n&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;2*n&#39;</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span> <span class="o">==</span> <span class="mi">14</span>
+<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;2**n&#39;</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span> <span class="o">==</span> <span class="mi">128</span>
+<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;n*n&#39;</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span> <span class="o">==</span> <span class="mi">49</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;n&#39;, &#39;2*n&#39;, &#39;2**n&#39;, &#39;n*n&#39;)
+(0, 0, 1, 0)
+(1, 2, 2, 1)
+(2, 4, 4, 4)
+(3, 6, 8, 9)
+(4, 8, 16, 16)
+(5, 10, 32, 25)
+(6, 12, 64, 36)
+(7, 14, 128, 49)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   n  2*n  2**n  n*n
+0  0    0     1    0
+1  1    2     2    1
+2  2    4     4    4
+3  3    6     8    9
+4  4    8    16   16
+5  5   10    32   25
+6  6   12    64   36
+7  7   14   128   49
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="n">n</span><span class="o">*</span><span class="n">m</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">)]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="mi">6</span> <span class="o">==</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span>
+<span class="k">assert</span> <span class="n">df</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span> <span class="o">==</span> <span class="mi">49</span> <span class="o">==</span> <span class="mi">7</span><span class="o">*</span><span class="mi">7</span> <span class="o">==</span> <span class="mi">7</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 2, 3, 4, 5, 6, 7], [0, 2, 4, 6, 8, 10, 12, 14], [0, 3, 6, 9, 12, 15, 18, 21], [0, 4, 8, 12, 16, 20, 24, 28], [0, 5, 10, 15, 20, 25, 30, 35], [0, 6, 12, 18, 24, 30, 36, 42], [0, 7, 14, 21, 28, 35, 42, 49]]
+   0  1   2   3   4   5   6   7
+0  0  0   0   0   0   0   0   0
+1  0  1   2   3   4   5   6   7
+2  0  2   4   6   8  10  12  14
+3  0  3   6   9  12  15  18  21
+4  0  4   8  12  16  20  24  28
+5  0  5  10  15  20  25  30  35
+6  0  6  12  18  24  30  36  42
+7  0  7  14  21  28  35  42  49
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;End of arithmetic.py&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>End of arithmetic.py
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav text-center">
+        <li><a href="../../../index.html">stemkiosk  documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav text-center">
+      
+        <li><a href="index.html" title="Arithmetic" >previous</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="../../index.html" >Topics in STEM</a></li>
+        <li><a href="../index.html" >Math</a></li>
+        <li><a href="index.html" >Arithmetic</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2025, @stemkiosk.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.2.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>
