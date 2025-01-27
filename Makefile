@@ -35,13 +35,13 @@ docs-serve:
 	$(MAKE) -C docs html
 
 docs/topics/math/%.py.cast: docs/topics/math/%.py
-	python -m asciifx --width 80 --height 24 -o $@ $<
+	python -m asciifx --speed 9 --width 80 --height 24 -o $@ $<
 
 FONTFAMILY=Source Code Pro for Powerline,JetBrains Mono,Fira Code,SF Mono,Menlo,Consolas,DejaVu Sans Mono,Liberation Mono
 
 AGG=./agg
 docs/topics/math/%.py.cast.gif: docs/topics/math/%.py.cast
-	${AGG} --speed=10 --font-family="${FONTFAMILY}" --theme=github-dark --font-size=27 $< $@
+	${AGG} --speed=8 --font-family="${FONTFAMILY}" --theme=github-dark --font-size=27 $< $@
 
 docs/topics/math/%.py.cast.gif-play: docs/topics/math/%.py.cast.gif
 	xdg-open $<
@@ -92,10 +92,10 @@ reset:
 	@reset
 
 play-arithmetic-too-fast:
-	@asciinema play --speed=800 docs/topics/math/arithmetic.py.cast
+	@asciinema play --speed=80 docs/topics/math/arithmetic/arithmetic.py.cast
 
 play-arithmetic:
-	@asciinema play --speed=10 docs/topics/math/arithmetic.py.cast
+	@asciinema play --speed=25 docs/topics/math/arithmetic/arithmetic.py.cast
 
 play:
 	@reset
@@ -120,7 +120,7 @@ time:
 	time make play
 
 clean:
-	rm -f docs/topics/math/*.cast docs/topics/math/*.cast.gif
+	rm -f docs/topics/math/arithmetic/*.cast docs/topics/math/arithmetic/*.cast.gif
 
 
 _create-docs-folder:
@@ -185,3 +185,13 @@ _install-miniforge-screencast-user:
 	${sudoscreen} -i bash --login -c 'mamba activate "${CONDA_ROOT_SCU}" && set -x && ${mamba} env export --from-history'
 
 .PHONY: docs
+
+
+
+BUILDDIRHTML=docs/_build/html
+DOCS_GIT_HTML_BRANCH=gh-pages
+gh-pages:
+	# Push docs to gh-pages branch with a .nojekyll file
+	ghp-import -n -b '${DOCS_GIT_HTML_BRANCH}' -p '${BUILDDIRHTML}' \
+		-m "DOC,RLS: :books: docs built from: $(shell git -C $(shell pwd) rev-parse --short HEAD)"
+	GIT_PAGER='' git log -n3 --reverse --stat '${DOCS_GIT_HTML_BRANCH}'
