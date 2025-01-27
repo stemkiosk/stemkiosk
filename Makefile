@@ -11,6 +11,7 @@ help:
 
 
 install:
+	$(MAKE) install_miniforge
 	$(MAKE) install_environmentyml
 	$(MAKE) install_requirementstxt
 	$(MAKE) install_postInstall
@@ -18,8 +19,10 @@ install:
 install_requirementstxt:
 	pip install -r requirements.txt
 
+MAMBA?=mamba
 install_environmentyml:
-	mamba env update -f environment.yml
+	echo "MAMBA=${MAMBA}"
+	${MAMBA} env update -f environment.yml
 
 install_postInstall:
 	bash -x ./postInstall
@@ -149,7 +152,7 @@ _create-screencast-user:
 	# git clone the stemkiosk repo into ~/workspace/stemkiosk
 	${sudoscreen} sh -x -c 'mkdir -p ~/workspace; cd ~/workspace/; test -d stemkiosk/ || git clone https://github.com/westurner/stemkiosk; cd stemkiosk/ && ls -al'
 	# run `make install` and then ls ~/.local/bin
-	${sudoscreen} sh -x -c 'cd ~/workspace/stemkiosk; make install; ls -al ~/.local/bin'
+	${sudoscreen} sh -x -c 'cd ~/workspace/stemkiosk;MAMBA="${mamba}" make install ; test ! -d ~/.local/bin || ls -al ~/.local/bin'
 	# login at least once to attempt to clear the initial login banner
 	${sudoscreen} -i bash --login -c '(set -x; cat ~/.bash_history) && echo "+ </cat>"; exit'
 
@@ -159,11 +162,12 @@ _rm-screencast-user:
 MINIFORGE3_SH=Miniforge3-$(shell uname)-$(shell uname -m).sh
 MINIFORGE3_URL=https://github.com/conda-forge/miniforge/releases/latest/download/${MINIFORGE3_SH}
 CONDA_ROOT_SCU=/home/${SCREENCASTUSER}/conda
+mamba=${CONDA_ROOT_SCU}/bin/mamba
 _install-miniforge-screencast-user:
 	# Install miniforge:  https://github.com/conda-forge/miniforge
 	@echo "MINIFORGE3_URL: ${MINIFORGE3_URL}"
 	${sudoscreen} sh -x -c 'cd ~/workspace && test -f "${MINIFORGE3_SH}" || curl -L -o "${MINIFORGE3_SH}" "${MINIFORGE3_URL}"'
 	# TODO: check checksum
 	${sudoscreen} sh -x -c 'cd ~/workspace && test -d "${CONDA_ROOT_SCU}" || bash "${MINIFORGE3_SH}" -b -p "${CONDA_ROOT_SCU}"'
-	${sudoscreen} sh -x -c '~/conda/bin/mamba init'
-	${sudoscreen} sh -x -c '~/conda/bin/mamba activate "${CONDA_ROOT_SCU}" && ~/conda/bin/mamba freeze'
+	${sudoscreen} sh -x -c '${mamba} init'
+	${sudoscreen} sh -x -c '${mamba} activate "${CONDA_ROOT_SCU}" && ${mamba} freeze'
