@@ -184,3 +184,4 @@ _install-miniforge-screencast-user:
 	${sudoscreen} sh -x -c 'XDG_CONFIG_HOME="/home/${SCREENCASTUSER}" CONDARC="${CONDA_ROOT_SCU}/.condarc" ${mamba} init'
 	${sudoscreen} -i bash --login -c 'mamba activate "${CONDA_ROOT_SCU}" && set -x && ${mamba} env export --from-history'
 
+.PHONY: docs
